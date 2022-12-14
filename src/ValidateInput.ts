@@ -9,8 +9,8 @@ export class ValidateInput {
 
     isBinary(): boolean {
        const inputSplited = this.input.split("");
-       const ischaractesBinary = inputSplited.every((value: string) => value === "0" || value === "1" || value === ",");
+       const ischaractersBinary = inputSplited.every((value: string) => value === "0" || value === "1" || value === ",");
        
-       return ischaractesBinary;
+       return ischaractersBinary;
     }   
 }
