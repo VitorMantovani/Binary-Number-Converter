@@ -1,16 +1,31 @@
+/**
+ * This class is responsible for the validations of the binary received as input.
+ * @author Vitor Mantovani
+ */
 export class ValidateInput {
-
-    constructor(private input: string) {}
-
+    /**
+     * @constructor
+     * @param {string} - The binary to validate. 
+     */
+    constructor(private binary: string) {}
+    /**
+     * This method checks if the input is empty or not.
+     * @returns {boolean} - False if the input is empty.
+     */
     isInputEmpty(): boolean {
-        if(!this.input) throw new Error("Input is empty!");
+        if(!this.binary) throw new Error("Input is empty!");
         return false;
     }
-
+    /**
+     * This method checks if the input passed is a binary or not.
+     * @returns {boolean} - True if the input is a binary, otherwise returns false if the 
+     * input is not a binary
+     */
     isBinary(): boolean {
-       const inputSplited = this.input.split("");
-       const ischaractersBinary = inputSplited.every((value: string) => value === "0" || value === "1" || value === ",");
+       const inputSplited = this.binary.split("");
+       const isinputBinary = inputSplited.every((value: string) => value === "0" || value === "1" || value === ",");
+       if (!isinputBinary) throw new Error("Input is not a binary!")
        
-       return ischaractersBinary;
+       return isinputBinary;
     }   
 }

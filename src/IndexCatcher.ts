@@ -1,9 +1,20 @@
+/**
+ * This class is responsible for catching binary's first character index to be used in the binary to decimal calculus.
+ * @author Vitor Mantovani
+ */
 export class IndexCatcher {
-    constructor (private input: string) {}
+    /**
+     * @constructor
+     * @param {string} binary = The binary number
+     */
+    constructor (private binary: string) {}
 
-    
+    /**
+     * This method is responsible for catching binary's first character index.
+     * @returns {number} - The index of first binary's character.
+     */    
     catchInicialIndex() {
-        const splitedInput: string[] = this.input.split("");
+        const splitedInput: string[] = this.binary.split("");
         
         let index: number = 0;
 
