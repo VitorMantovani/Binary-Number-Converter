@@ -23,7 +23,7 @@ export class ValidateInput {
      */
     isBinary(): boolean {
        const inputSplited = this.binary.split("");
-       const isinputBinary = inputSplited.every((value: string) => value === "0" || value === "1" || value === ",");
+       const isinputBinary = inputSplited.every((value: string) => ["0", "1", ","].includes(value));
        if (!isinputBinary) throw new Error("Input is not a binary!")
        
        return isinputBinary;
