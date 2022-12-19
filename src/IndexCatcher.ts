@@ -19,7 +19,7 @@ export class IndexCatcher {
         let index: number = 0;
 
         if (splitedInput.includes(",")) {
-            const charsAfterComma = splitedInput.slice(splitedInput.indexOf(",") + 1);
+            const charsAfterComma: string[] = splitedInput.slice(splitedInput.indexOf(",") + 1);
             index = -charsAfterComma.length;
             return index;
         }

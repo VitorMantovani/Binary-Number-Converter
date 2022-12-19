@@ -17,7 +17,7 @@ export class BinaryToDecimal {
    * @returns {number} - The decimal number converted
    */
   convertBinary(): number {
-    const decimalNumber = this.array.reduceRight((decimal, algo) => {
+    const decimalNumber: number = this.array.reduceRight((decimal, algo) => {
         decimal += algo * Math.pow(2, this.index)
         this.index++
         return decimal;

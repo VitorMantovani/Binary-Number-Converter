@@ -16,7 +16,7 @@ export class InputToArray {
    */
   splitInput(): number[] {
     if (this.binary.includes(",")) this.binary = this.binary.replace(",", "");
-    const arrayOfChars = this.binary.split("").map(Number)
+    const arrayOfChars: number[] = this.binary.split("").map(Number)
     return arrayOfChars;
   }
 }

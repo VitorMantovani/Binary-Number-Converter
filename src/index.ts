@@ -3,7 +3,7 @@ import { IndexCatcher } from "./IndexCatcher";
 import { InputToArray } from "./InputToArray";
 import { ValidateInput } from "./ValidateInput";
 
-const BINARY = "1010,10";
+const BINARY: string = "1010,10";
 
 const validateInput = new ValidateInput(BINARY);
 
@@ -13,13 +13,13 @@ const indexCatcher = new IndexCatcher(BINARY);
 
 if (!validateInput.isInputEmpty()) {
   if (validateInput.isBinary()) {
-    const arrayOfChars = inputToArray.splitInput();
+    const arrayOfChars: number[] = inputToArray.splitInput();
 
-    const inicialIndex = indexCatcher.catchInicialIndex();
+    const inicialIndex: number = indexCatcher.catchInicialIndex();
 
     const binaryToDecimal = new BinaryToDecimal(arrayOfChars, inicialIndex);
 
-    const decimal = binaryToDecimal.convertBinary();
+    const decimal: number = binaryToDecimal.convertBinary();
 
     console.log(decimal);
   }
