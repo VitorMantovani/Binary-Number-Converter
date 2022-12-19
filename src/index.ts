@@ -11,8 +11,7 @@ const inputToArray = new InputToArray(BINARY);
 
 const indexCatcher = new IndexCatcher(BINARY);
 
-if (!validateInput.isInputEmpty()) {
-  if (validateInput.isBinary()) {
+if (!validateInput.isInputEmpty() && validateInput.isBinary()) {
     const arrayOfChars: number[] = inputToArray.splitInput();
 
     const inicialIndex: number = indexCatcher.catchInicialIndex();
@@ -22,5 +21,4 @@ if (!validateInput.isInputEmpty()) {
     const decimal: number = binaryToDecimal.convertBinary();
 
     console.log(decimal);
-  }
 }
