@@ -31,12 +31,11 @@ $ git clone https://github.com/VitorMantovani/Binary-Number-Converter.git
 $ cd BINARYNUMCONVERTER
 
 # Install dependencies
-$ yarn or npm init
+$ yarn
 
 # Run the project
-$ yarn start or npm start
+$ yarn dev
 
-# The server will initialize in the <http://localhost:3000>
 ```
 
 ## 🤝 Colaboradores
